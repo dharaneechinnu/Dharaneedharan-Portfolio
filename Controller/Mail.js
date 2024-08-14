@@ -2,7 +2,7 @@ var nodemailer = require('nodemailer');
 
 
 const sendMail = (req,res)=>{
-    const {name, email, message} = req.body;
+    const {name, email,number,subject, message} = req.body;
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -15,7 +15,7 @@ const sendMail = (req,res)=>{
         from: 'dharaneedharanchinnusamy@gmail.com',
         to: 'dharaneedharanchinnusamy@gmail.com',
         subject: 'Message From Portfolio',
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+        text: `Name: ${name}\nsubject: ${subject}\nEmail: ${email}\nnumber:${number}\nMessage: ${message}`
       };
       
       transporter.sendMail(mailOptions, function(error, info){
