@@ -7,7 +7,7 @@ const sendMail = (req,res)=>{
         service: 'gmail',
         auth: {
           user: 'dharaneedharanchinnusamy@gmail.com',
-          pass: process.env.PASS
+          pass:  process.env.PASS
         }
       });
       

@@ -9,7 +9,7 @@ const port = process.env.PORT ||3400
 
 app.use(cors())
 app.use(express.json())
-app.use('/',require('./Route/AllRoute'))
+app.use('/mail',require('./Route/AllRoute'))
 
 
 
